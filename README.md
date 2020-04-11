@@ -43,6 +43,7 @@ The data requires few parameters for displaying the correct chart:
 {
       name: "Element Value",
       type: 'Element Type',
+	  collapsed: true,
       children:[]
 }
 ```
@@ -67,6 +68,7 @@ export class AppComponent {
 		{
 			name: "Captain America",
 			type: 'VP',
+			collapsed: true,
 			children: [
 				{
 					name: "Hawkeye",
