@@ -11,11 +11,21 @@ export class OrgChartComponent {
 	@Input() hasParent = false;
 	hideChild = false;
 
-	ngOnInit(){
-		this.hideChild = this.data.collapsed;
+	ngOnInit() {
+		if (this.data) {
+			this.hideChild = this.data.collapsed;
+		} else {
+			this.hideChild = false;
+		}
 	}
-	
-	toggleShowChild(value){
+
+	ngChanges(changes: any) {
+		if (changes.data && changes.data != null) {
+			this.hideChild = changes.collapsed;
+		}
+	}
+
+	toggleShowChild(value) {
 		this.hideChild = !this.hideChild;
 	}
 }

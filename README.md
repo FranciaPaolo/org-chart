@@ -43,7 +43,7 @@ The data requires few parameters for displaying the correct chart:
 {
       name: "Element Value",
       type: 'Element Type',
-	  collapsed: true,
+      collapsed: true,
       children:[]
 }
 ```
